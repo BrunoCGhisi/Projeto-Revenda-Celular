@@ -30,7 +30,7 @@ import DoneIcon from "@mui/icons-material/Done";
 
     async function getBranch() {
         try {
-          const response = await axios.get("http://localhost:3000/categoria");
+          const response = await axios.get("http://localhost:3000/marca");
           setBranchs(response.data.marca); // aqui pe o nome que vem do back antona burra
         } catch (error: any) {
           new Error(error);
@@ -39,7 +39,7 @@ import DoneIcon from "@mui/icons-material/Done";
 
       async function postBranch() {
         try {
-          const response = await axios.post("http://localhost:3000/autor", {
+          const response = await axios.post("http://localhost:3000/marca", {
             nome: nome,
           });
           getBranch();
@@ -54,12 +54,12 @@ import DoneIcon from "@mui/icons-material/Done";
       async function putBranch() {
         try {
           const response = await axios.put(
-            `http://localhost:3000/autor?id=${branchId}`,
+            `http://localhost:3000/marca?id=${branchId}`,
             {
               nome: nome,
             }
           );
-          if (response.status === 200) alert("Autor atualizado com sucesso!");
+          if (response.status === 200) alert("Marca atualizado com sucesso!");
           getBranch();
         } catch (error: any) {
           new Error(error);
@@ -71,7 +71,7 @@ import DoneIcon from "@mui/icons-material/Done";
       async function delBranch(id: string) {
         try {
           const response = await axios.delete(
-            `http://localhost:3000/autor?id=${branchId}`
+            `http://localhost:3000/marca?id=${branchId}`
           );
           if (response.status === 200) alert("Marca deletado com sucesso!");
           getBranch();
