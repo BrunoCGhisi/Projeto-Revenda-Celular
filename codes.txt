@@ -14,6 +14,10 @@
 
 - npm i -D react-router-dom
 
+***Axios***
+
+npm install axios
+
 ***Material UI icones***
 
 - npm install @mui/icons-material @mui/material @emotion/styled @emotion/react

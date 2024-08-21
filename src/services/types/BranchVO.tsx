@@ -2,7 +2,7 @@
 // Estou tipando Category VO com as variaveis que ficam dentro da tabela Categoria
 // Nesse caso:
 
-export type CategoryVO = {
+export type BranchVO = {
     id: string  //Se torna uma string
     nome: string     //Se torna uma string
 }
