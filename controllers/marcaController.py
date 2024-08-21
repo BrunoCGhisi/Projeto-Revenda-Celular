@@ -6,8 +6,8 @@ def marcaController():
     if request.method == 'POST':
         try:
             data = request.get_json()
-            marca = Marca(data['nome'])
-            db.session.add(marca)
+            marcas = Marca(data['nome'])
+            db.session.add(marcas)
             db.session.commit()
             return 'Marca adicionado com sucesso!', 200
         except Exception as e:
