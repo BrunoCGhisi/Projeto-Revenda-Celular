@@ -46,9 +46,7 @@ import DoneIcon from "@mui/icons-material/Done";
           if (response.status === 200) alert("Marca cadastra com sucesso!");
         } catch (error: any) {
           new Error(error);
-        } finally {
-          
-        }
+        } 
       }
 
       async function putBranch() {
